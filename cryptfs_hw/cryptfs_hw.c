@@ -230,3 +230,38 @@ int wipe_hw_device_encryption_key(const char* enc_mode)
 
     return 0;
 }
+#endif
+
+int is_ice_enabled(void)
+{
+    /* If (USE_ICE_FLAG) => return 1
+     * if (property set to use gpce) return 0
+     * we are using property to test UFS + GPCE, even though not required
+     * if (storage is ufs) return 1
+     * else return 0 so that emmc based device can work properly
+     */
+#ifdef USE_ICE_FOR_STORAGE_ENCRYPTION
+    SLOGD("Ice enabled = true");
+    return 1;
+#else
+    char enc_hw_type[PATH_MAX];
+    char prop_storage[PATH_MAX];
+    int ice = 0;
+    int i;
+    if (property_get("crypto.fde_enc_hw_type", enc_hw_type, "")) {
+        if(!strncmp(enc_hw_type, "gpce", PROPERTY_VALUE_MAX)) {
+            SLOGD("GPCE would be used for HW FDE");
+            return 0;
+        }
+    }
+
+    if (property_get("ro.boot.bootdevice", prop_storage, "")) {
+        if(strstr(prop_storage, "ufs")) {
+            SLOGD("ICE would be used for HW FDE");
+            return 1;
+        }
+    }
+    SLOGD("GPCE would be used for HW FDE");
+    return 0;
+#endif
+}
