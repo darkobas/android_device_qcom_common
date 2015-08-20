@@ -28,6 +28,7 @@
 
 #include <cryptfs_hw.h>
 #include <stdlib.h>
+#include <string.h>
 #include <sys/limits.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -194,7 +195,21 @@ unsigned int is_hw_disk_encryption(const char* encryption_mode)
     return ret;
 }
 
-int is_ice_enabled(void)
+int clear_hw_device_encryption_key(void)
+{
+    if (load_qseecom_library())
+        return qseecom_wipe_key(map_usage(QSEECOM_DISK_ENCRYPTION));
+
+    return 0;
+}
+
+/*
+ * By default HW FDE is enabled, if the execution comes to
+ * is_hw_fde_enabled() API then for specific device/soc id,
+ * HW FDE is disabled.
+ */
+#ifdef CONFIG_SWV8_DISK_ENCRYPTION
+unsigned int is_hw_fde_enabled(void)
 {
     /* If (USE_ICE_FLAG) => return 1
      * if (property set to use gpce) return 0
