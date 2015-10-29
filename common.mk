@@ -529,8 +529,8 @@ CRDA += linville.key.pub.pem
 CRDA += init.crda.sh
 
 #WLAN
-WLAN := prima_wlan.ko
-WLAN += pronto_wlan.ko
+#WLAN := prima_wlan.ko
+#WLAN += pronto_wlan.ko
 
 PRODUCT_PACKAGES := \
     AccountAndSyncSettings \
@@ -642,7 +642,7 @@ PRODUCT_PACKAGES += $(VT_JNI)
 PRODUCT_PACKAGES += $(VT_QTI_PERMISSIONS)
 PRODUCT_PACKAGES += $(IMS_SETTINGS)
 PRODUCT_PACKAGES += $(CRDA)
-PRODUCT_PACKAGES += $(WLAN)
+#PRODUCT_PACKAGES += $(WLAN)
 
 # Live Wallpapers
 PRODUCT_PACKAGES += \
