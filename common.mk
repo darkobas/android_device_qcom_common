@@ -150,13 +150,13 @@ FM += libqcomfm_jni
 FM += libfmjni
 
 #GPS
-GPS_HARDWARE := gps.conf
-GPS_HARDWARE += gps.default
-GPS_HARDWARE += gps.mahimahi
-GPS_HARDWARE += libloc_adapter
-GPS_HARDWARE += libgps.utils
-GPS_HARDWARE += libloc_eng
-GPS_HARDWARE += libloc_api_v02
+#GPS_HARDWARE := gps.conf
+#GPS_HARDWARE += gps.default
+#GPS_HARDWARE += gps.mahimahi
+#GPS_HARDWARE += libloc_adapter
+#GPS_HARDWARE += libgps.utils
+#GPS_HARDWARE += libloc_eng
+#GPS_HARDWARE += libloc_api_v02
 
 #HDMID
 HDMID := hdmid
@@ -542,7 +542,6 @@ PRODUCT_PACKAGES := \
     HiddTestApp \
     Calculator \
     Calendar \
-    Camera \
     CellBroadcastReceiver \
     CertInstaller \
     DrmProvider \
@@ -563,7 +562,6 @@ PRODUCT_PACKAGES := \
     CalendarProvider \
     SyncProvider \
     IM \
-    VoiceDialer \
     FM2 \
     FMRadio \
     FMRecord \
@@ -591,7 +589,7 @@ PRODUCT_PACKAGES += $(E2FSPROGS)
 PRODUCT_PACKAGES += $(EBTABLES)
 PRODUCT_PACKAGES += $(FASTPOWERON)
 PRODUCT_PACKAGES += $(FM)
-PRODUCT_PACKAGES += $(GPS_HARDWARE)
+#PRODUCT_PACKAGES += $(GPS_HARDWARE)
 PRODUCT_PACKAGES += $(HDMID)
 PRODUCT_PACKAGES += $(HOSTAPD)
 PRODUCT_PACKAGES += $(I420CC)
