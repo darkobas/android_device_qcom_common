@@ -544,7 +544,6 @@ PRODUCT_PACKAGES := \
     CertInstaller \
     DrmProvider \
     Email \
-    Gallery2 \
     LatinIME \
     Phone \
     Provision \
