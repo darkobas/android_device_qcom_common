@@ -131,7 +131,7 @@ DASH += libextmedia_jni
 
 #DATA_OS
 DATA_OS := librmnetctl
-DATA_OS += rmnetcli
+#DATA_OS += rmnetcli
 
 #E2FSPROGS
 E2FSPROGS := e2fsck
