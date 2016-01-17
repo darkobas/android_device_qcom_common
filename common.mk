@@ -124,9 +124,9 @@ CURL := libcurl
 CURL += curl
 
 #DASH
-#DASH := libdashplayer
-#DASH += libqcmediaplayer
-#DASH += qcmediaplayer
+DASH := libdashplayer
+DASH += libqcmediaplayer
+DASH += qcmediaplayer
 DASH += libextmedia_jni
 
 #DATA_OS
@@ -415,7 +415,7 @@ MM_VIDEO += libavenhancements
 MM_VIDEO += libdivxdrmdecrypt
 MM_VIDEO += liblasic
 MM_VIDEO += libOmxVdec
-#MM_VIDEO += libOmxVdecHevc
+MM_VIDEO += libOmxVdecHevc
 MM_VIDEO += libOmxVenc
 MM_VIDEO += libOmxVidEnc
 MM_VIDEO += libstagefrighthw
