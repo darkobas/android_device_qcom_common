@@ -64,9 +64,9 @@ if [[ ! -d .repo ]]; then
   exit 2
 fi
 
-if [[ ! -d vendor/aosparadox ]]; then
+if [[ ! -d vendor/darkobas ]]; then
   echo ""
-  echo "${bldred}ERROR:${txtrst} No vendor/aosparadox directory found.  Is this an AOSParadox build tree?"
+  echo "${bldred}ERROR:${txtrst} No vendor directory found."
   exit 3
 fi
 
