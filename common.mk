@@ -497,10 +497,10 @@ QRGND += qrngp
 QRGND += qrngtest
 
 #WPA
-WPA := wpa_supplicant.conf
-WPA += wpa_supplicant_wcn.conf
-WPA += wpa_supplicant_ath6kl.conf
-WPA += wpa_supplicant
+#WPA := wpa_supplicant.conf
+#WPA += wpa_supplicant_wcn.conf
+#WPA += wpa_supplicant_ath6kl.conf
+#WPA += wpa_supplicant
 
 #ZLIB
 ZLIB := gzip
@@ -626,7 +626,7 @@ PRODUCT_PACKAGES += $(STMLOG)
 PRODUCT_PACKAGES += $(TSLIB_EXTERNAL)
 PRODUCT_PACKAGES += $(QRGND)
 PRODUCT_PACKAGES += $(UPDATER)
-PRODUCT_PACKAGES += $(WPA)
+#PRODUCT_PACKAGES += $(WPA)
 PRODUCT_PACKAGES += $(ZLIB)
 PRODUCT_PACKAGES += $(VT_JNI)
 PRODUCT_PACKAGES += $(VT_QTI_PERMISSIONS)
@@ -659,7 +659,7 @@ PRODUCT_PACKAGES += vcard
 PRODUCT_PACKAGES += tcmiface
 
 #intialise PRODUCT_PACKAGES_DEBUG list for debug modules
-PRODUCT_PACKAGES_DEBUG := init.qcom.testscripts.sh
+#PRODUCT_PACKAGES_DEBUG := init.qcom.testscripts.sh
 
 
 PRODUCT_COPY_FILES := \
