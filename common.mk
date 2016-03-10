@@ -79,7 +79,7 @@ AUDIO_POLICY += audio_policy.msm7627a
 AUDIO_POLICY += audio_policy.msm7630_surf
 AUDIO_POLICY += audio_policy.msm7630_fusion
 #AUDIO_POLICY += audio_policy.default
-AUDIO_POLICY += audio_policy.conf
+#AUDIO_POLICY += audio_policy.conf
 AUDIO_POLICY += audio_policy_8064.conf
 
 #tinyalsa test apps
@@ -699,9 +699,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
-    device/qcom/common/media/media_profiles.xml:system/etc/media_profiles.xml \
-    device/qcom/common/media/media_codecs.xml:system/etc/media_codecs.xml
+    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml 
 
 ifeq ($(TARGET_DEVICE_NAME_LOW_END),true)
 PRODUCT_COPY_FILES += \
