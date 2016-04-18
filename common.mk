@@ -124,10 +124,10 @@ CURL := libcurl
 CURL += curl
 
 #DASH
-DASH := libdashplayer
-DASH += libqcmediaplayer
-DASH += qcmediaplayer
-DASH += libextmedia_jni
+#DASH := libdashplayer
+#DASH += libqcmediaplayer
+#DASH += qcmediaplayer
+#DASH += libextmedia_jni
 
 #DATA_OS
 DATA_OS := librmnetctl
